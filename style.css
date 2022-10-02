@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+body {
+    padding: 5rem;
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #fff;
+    animation: break 7s ease-in-out forwards;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width : 100%;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width : 300px;
+    height : 300px;
+    flex-wrap: wrap;
+    padding: 2%;
+    background-color: rgb(34, 34, 34);
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: -2rem 0 3rem #000;
+    cursor: pointer;
+    transition: scale 300ms ease-out;
+}
+
+.card-container:hover {
+    scale: 1.1;
+}
+
+.card-container>p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.card-container>h1 {
+    font-size: 1.5rem;
+}
+
+.card-container>p:hover{
+    background: linear-gradient(90deg,#ff8a00,#e52e71);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.number {
+    width: 50px;
+    height : 50px;
+    border-radius: 50%;
+    font-size: 1em;
+    font-weight: 700;
+    text-align: center;
+    background-color: #333;
+    line-height: 50px;
+}
+
+.container {
+    display : flex;
+    width : 100%;
+}
+
+header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+}
+aside {
+    width : 80%;
+    padding-right: 20px; 
+}
+
+h1 {
+    background: linear-gradient(90deg,#ff8a00,#e52e71);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+main {
+    background: #333;
+    padding: 1rem;
+    width: 20%;
+    height: 215vh;
+}
+
+main>h2 {
+    background: linear-gradient(90deg,#ff8a00,#e52e71);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+aside h1 {
+    font-size: 2em;
+    
+}
+
+
+
+#boom {
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    width: 200px;
+    height: 200px;
+    animation: crash 7s linear;
+}
+
+@keyframes break {
+    50% {
+        rotate: 0deg;
+        color : #fff;
+    }
+    52%{
+        rotate: 1deg;
+        color: #ff0000;
+    }
+    54% {
+        rotate: -1deg;
+    }
+    56% {
+        rotate : 2deg;
+    }
+    58% {
+        rotate: -2deg;
+    }
+    60% {
+        rotate: 6deg;
+        color: #fff;
+    }
+    100% {
+        rotate: 6deg;
+    }
+}
+
+@keyframes crash {
+    0%{
+        translate : -100vw;
+        background-image: url('Images/planet.gif');
+        background-size: cover;
+    }
+    49% {
+        background-image: url('Images/planet.gif');
+        background-size: cover;
+    }
+    50% {
+        translate : 0;
+        background : url('Images/explosion.gif');
+        background-size: cover;
+    }
+    60% {
+        background-image: url('Images/explosion.gif');
+        background-size: cover;
+    }
+}
